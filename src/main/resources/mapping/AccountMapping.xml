@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.AccountMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.entity.Account">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="cell" jdbcType="VARCHAR" property="cell" />
+        <result column="login_id" jdbcType="VARCHAR" property="login_id" />
+    </resultMap>
+
+    <select id="Sel" resultType="com.example.entity.Account">
+        select * from c_app_account where id = #{id}
+    </select>
+
+</mapper>
