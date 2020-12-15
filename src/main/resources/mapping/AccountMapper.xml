@@ -9,7 +9,7 @@
     </resultMap>
 
     <select id="Sel" resultType="com.example.entity.Account">
-        select * from c_app_account where id = #{id}
+        select id,cell,login_id,password from c_app_account where id = #{id}
     </select>
 
 </mapper>

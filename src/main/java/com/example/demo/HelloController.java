@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.entity.Account;
 import com.example.service.AccountService;
 
 @RestController
@@ -15,7 +14,7 @@ public class HelloController {
     private AccountService accountService;
 
     @RequestMapping(value = "getUser/{id}",method = RequestMethod.GET)
-    public String hello(@PathVariable int id) {
+    public String hello(@PathVariable("id") int id) {
         return accountService.Sel(id).toString();
     }
 
